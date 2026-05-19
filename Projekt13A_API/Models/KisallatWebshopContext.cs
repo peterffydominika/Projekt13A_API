@@ -30,8 +30,6 @@ public partial class KisallatWebshopContext : DbContext
 
     public virtual DbSet<Termekek> Termekek { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseMySQL("server=localhost;database=kisallat_webshop;user=root;password=");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Alkategoriak>(entity =>
